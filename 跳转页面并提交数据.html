@@ -1,0 +1,37 @@
+<!--
+ * @Autor: ErioY
+ * @Date: 2019-09-04 19:41:20
+ * @Email: 1973545559@qq.com
+ * @Github: https://github.com/ErioY
+ * @LastEditors: ErioY
+ * @LastEditTime: 2019-09-04 19:58:51
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>提交数据</title>
+</head>
+<body>
+    <button>apple</button>
+    <button>pear</button>
+    <button>orange</button>
+    <button>banana</button>
+    
+    <script>
+    // 四个按钮都可以用location.href打开同一个新页面，
+    // 在新页面中输出“你是通过第几个按钮跳转到该页面的”
+    var aBtn = document.querySelectorAll("button");
+    for (var i = 0; i < aBtn.length; i++) {
+        aBtn[i].onclick = function() {
+            // 跳转页面并加上对应的#
+            window.location.href =  "商品详情页.html#" + this.innerHTML;
+            // 提取#及之后的内容
+            window.location.hash;
+        }
+    }
+    </script>
+</body>
+</html>
